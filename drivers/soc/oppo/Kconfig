@@ -1,0 +1,19 @@
+config OPPO_ARCH_FILE
+  bool "for build directory oppo"
+  ---help---
+  say Y to buid in
+
+config OPPO_COMMON_SOFT
+  bool "config oppo common software"
+  select OPPO_ARCH_FILE
+  help
+  define this config to get project verion from sharemem.
+  Maybe this value is from CDT or dynamic identify by hardware
+  id.
+
+source "drivers/soc/oppo/project_info/Kconfig"
+
+#ifdef OPLUS_FEATURE_MEMLEAK_DETECT
+#Hailong.Liu@BSP.MM 2019/03/18, Add for svelte
+source "drivers/soc/oppo/oppo_svelte/Kconfig"
+#endif /* OPLUS_FEATURE_MEMLEAK_DETECT */
