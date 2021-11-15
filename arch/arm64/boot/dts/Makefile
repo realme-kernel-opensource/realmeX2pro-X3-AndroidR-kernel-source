@@ -29,7 +29,7 @@
 #else
 ifeq ($(CONFIG_BRAND_SHOW_FLAG),realme)
     ifeq ($(CONFIG_SHIPPING_API_LEVEL),28)
-        
+        dts-dirs += 19781
     else
         dts-dirs += 19696
     endif
